@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/cityTextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="Település:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cityinfoTextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="Település neve"
+        android:textSize="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityTextView" />
+
+    <TextView
+        android:id="@+id/coordTextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="Koordináták:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityinfoTextView" />
+
+    <TextView
+        android:id="@+id/coordinfonameTextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="szélesség, hosszúság"
+        android:textSize="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coordTextView" />
+
+    <TextView
+        android:id="@+id/tempTextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="Hőmérséklet:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coordinfonameTextView" />
+
+    <TextView
+        android:id="@+id/tempinfonameTextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="xx.x °C"
+        android:textSize="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempTextView" />
+
+    <TextView
+        android:id="@+id/humindTextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="Páratartalom:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempinfonameTextView" />
+
+    <TextView
+        android:id="@+id/humidinfonameTextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="x %"
+        android:textSize="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humindTextView" />
+
+    <TextView
+        android:id="@+id/pressureTextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="Légnyomás:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidinfonameTextView" />
+
+    <TextView
+        android:id="@+id/pressureinfonameTextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="x hPa"
+        android:textSize="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pressureTextView" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="Törlés"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/modifyButton"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="Szerkesztés"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/deleteButton"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

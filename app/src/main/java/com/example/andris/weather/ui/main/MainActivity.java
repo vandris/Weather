@@ -11,7 +11,9 @@ import com.example.andris.weather.ui.modify.ModifyActivity;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainScreen {
+
+    public static final String KEY_CITIES = "KEY_CITIES";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
     public void sendButton(View view){
         Intent intent;
         switch(view.getId()) {
+            case R.id.searchButton:
+                intent = new Intent(this, InfoActivity.class);
+                intent.putExtra(EXTRA_MESSAGE, "");
+                startActivity(intent);
+                break;
             case R.id.infoButton:
                 intent = new Intent(this, InfoActivity.class);
                 intent.putExtra(EXTRA_MESSAGE, "");
@@ -43,5 +50,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
         }
+    }
+
+    @Override
+    public void showCities(String citiesSearchTerm){
+        Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+        intent.putExtra(KEY_CITIES, citiesSearchTerm);
+        startActivity(intent);
     }
 }

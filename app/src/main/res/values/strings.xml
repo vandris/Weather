@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Weather</string>
+    <string name="city_title">Település:</string>
+    <string name="city_info">Település neve</string>
+    <string name="coord_title">Koordináták:</string>
+    <string name="coord_info">szélesség, magasság</string>
+    <string name="temp_title">Hőmérséklet:</string>
+    <string name="temp_info">xx.x °C</string>
+    <string name="humid_title">Páratartalom</string>
+    <string name="humid_info">x %</string>
+    <string name="pressure_title">Légnyomás:</string>
+    <string name="pressure_info">x hPa</string>
+    <string name="search_info">Keresett település</string>
+    <string name="search">Keres</string>
+    <string name="delete">Törlés</string>
+    <string name="modify">Szerkesztés</string>
+    <string name="save">Mentés</string>
 </resources>

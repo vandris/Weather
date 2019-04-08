@@ -27,7 +27,7 @@ public class MainPresenter extends Presenter<MainScreen> {
     }
 
     public void showCitiesSearchList(
-            String artistSearchTerm) {
-        screen.showCities(artistSearchTerm);
+            String citiesSearchTerm) {
+        screen.showCities(citiesSearchTerm);
     }
 }

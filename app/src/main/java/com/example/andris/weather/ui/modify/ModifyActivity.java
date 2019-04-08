@@ -22,4 +22,14 @@ public class ModifyActivity extends AppCompatActivity implements ModifyScreen{
     protected void onStop(){
         super.onStop();
     }
+
+    @Override
+    public void showCityDatas() {
+
+    }
+
+    @Override
+    public void saveCityDatas() {
+
+    }
 }

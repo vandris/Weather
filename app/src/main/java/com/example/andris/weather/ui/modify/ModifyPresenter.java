@@ -26,4 +26,12 @@ public class ModifyPresenter extends Presenter<ModifyScreen> {
         super.detachScreen();
     }
 
+    public void showCityDatas(){
+        screen.showCityDatas();
+    }
+
+    public void saveCityDatas(){
+        screen.saveCityDatas();
+    }
+
 }

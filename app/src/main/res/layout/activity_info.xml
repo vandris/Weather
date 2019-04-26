@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cityinfoTextView" />
 
     <TextView
-        android:id="@+id/coordinfonameTextView"
+        android:id="@+id/coordinfoTextView"
         android:layout_width="200dp"
         android:layout_height="30dp"
         android:text="@string/coord_info"
@@ -62,10 +62,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coordinfonameTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/coordinfoTextView" />
 
     <TextView
-        android:id="@+id/tempinfonameTextView"
+        android:id="@+id/tempinfoTextView"
         android:layout_width="200dp"
         android:layout_height="30dp"
         android:text="@string/temp_info"
@@ -85,10 +85,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempinfonameTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/tempinfoTextView" />
 
     <TextView
-        android:id="@+id/humidinfonameTextView"
+        android:id="@+id/humidinfoTextView"
         android:layout_width="200dp"
         android:layout_height="30dp"
         android:text="@string/humid_info"
@@ -108,10 +108,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/humidinfonameTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/humidinfoTextView" />
 
     <TextView
-        android:id="@+id/pressureinfonameTextView"
+        android:id="@+id/pressureinfoTextView"
         android:layout_width="200dp"
         android:layout_height="30dp"
         android:text="@string/pressure_info"
@@ -126,6 +126,7 @@
         android:layout_width="120dp"
         android:layout_height="40dp"
         android:text="@string/delete"
+        android:onClick="sendButton"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,6 +137,7 @@
         android:layout_width="120dp"
         android:layout_height="40dp"
         android:text="@string/modify"
+        android:onClick="sendButton"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintEnd_toStartOf="@+id/deleteButton"

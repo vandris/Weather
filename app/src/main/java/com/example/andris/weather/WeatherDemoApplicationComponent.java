@@ -15,4 +15,5 @@ public interface WeatherDemoApplicationComponent {
     void inject(CitiesInteractor citiesInteractor);
 
     void inject(InfoPresenter citiesPresenter);
+
 }

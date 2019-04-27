@@ -28,29 +28,17 @@ public class MainActivity extends AppCompatActivity implements MainScreen {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView tv = (TextView) findViewById(R.id.textView);
-
         DBHelper.getInstance(this);
-        //tv.setText(String.valueOf(mydb.insertCity(5, "Érd", "10", "10", "10", "10", "10")));
-        //mydb.deleteCity(1);
-        tv.setText(Integer.toString(DBHelper.getInstance(this).maxID()));
-        MainActivity.this.runOnUiThread(new Runnable() {
+        feltolt();
+        /*MainActivity.this.runOnUiThread(new Runnable() {
             public void run() {
                 //Do something on UiThread
                 TextView tv = (TextView) findViewById(R.id.textView);
                 //tv.setText(mydb.getDataString("Szeged"));
             }
-        });
-        tv.setText(DBHelper.getInstance(this).getDataString("Szeged1"));
-        feltolt();
-        ArrayList array_list = DBHelper.getInstance(this).getAllCities();
-        //ArrayAdapter arrayAdapter = new ArrayAdapter(this,)
-        if(array_list.size() > 0) {
-            //tv.setText(array_list.size() + ":" + array_list.get(0).toString());
-            //tv.setText("van benne valami");
-        }else{
-            //tv.setText("nincs semmi");
-        }
+        });*/
+
+
     }
 
     public void feltolt(){

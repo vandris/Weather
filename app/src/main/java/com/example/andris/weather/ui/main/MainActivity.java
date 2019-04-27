@@ -10,7 +10,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.andris.weather.R;
+import com.example.andris.weather.db.CityDAO;
 import com.example.andris.weather.db.DBHelper;
+import com.example.andris.weather.io.swagger.client.model.City;
 import com.example.andris.weather.ui.info.InfoActivity;
 import com.example.andris.weather.ui.modify.ModifyActivity;
 
@@ -109,4 +111,17 @@ public class MainActivity extends AppCompatActivity implements MainScreen {
         intent.putExtra(KEY_CITIES, citiesSearchTerm);
         startActivity(intent);
     }
+
+    /*public void lekerdez(){
+        Thread dbThread = Thread {
+            City city = CityDataBase.getInstance(this).CityDAO().getSpecificGrades("A+");
+            runOnUiThread {
+                tvResult.text = "";
+                city.forEach {
+                    tvResult.append("${it.studentId} ${it.grade}\n")
+                }
+            }
+        }
+        dbThread.start();
+    }*/
 }

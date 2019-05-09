@@ -1,11 +1,11 @@
-package com.example.andris.weather.ui;
+package com.example.andris.weather;
 
 import android.content.Context;
 
 import com.example.andris.weather.di.Network;
+import com.example.andris.weather.ui.UIModule;
 
 import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 import javax.inject.Singleton;
 
@@ -13,24 +13,22 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class UIModule {
+public class AndroidTestModule {
+    private final UIModule UIModule;
 
-    private Context context;
-
-    public UIModule(Context context) {
-        this.context = context;
+    public AndroidTestModule(Context context) {
+        this.UIModule = new UIModule(context);
     }
 
     @Provides
     public Context provideContext() {
-        return context;
+        return UIModule.provideContext();
     }
 
     @Provides
     @Singleton
     @Network
     public Executor provideNetworkExecutor() {
-        return Executors.newFixedThreadPool(1);
+        return UIModule.provideNetworkExecutor();
     }
-
 }

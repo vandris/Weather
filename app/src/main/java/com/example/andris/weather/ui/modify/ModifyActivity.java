@@ -44,10 +44,13 @@ public class ModifyActivity extends AppCompatActivity implements ModifyScreen{
         Intent intent;
         switch(view.getId()) {
             case R.id.saveButton:
-                saveCityDatas();
-                intent = new Intent(this, MainActivity.class);
-                intent.putExtra(EXTRA_MESSAGE, "");
-                startActivity(intent);
+                if (saveCityDatas()) {
+                    intent = new Intent(this, MainActivity.class);
+                    intent.putExtra(EXTRA_MESSAGE, "");
+                    startActivity(intent);
+                }
+                else
+                    Toast.makeText(getApplicationContext(), "Adj meg minden paramétert!", Toast.LENGTH_LONG).show();
                 break;
         }
     }
@@ -73,12 +76,19 @@ public class ModifyActivity extends AppCompatActivity implements ModifyScreen{
     }
 
     @Override
-    public void saveCityDatas() {
+    public boolean saveCityDatas() {
         EditText cityEt = (EditText)findViewById(R.id.cityinfoEditText);
         EditText coordEt = (EditText) findViewById(R.id.coordinfoEditText);
         EditText tempEt = (EditText) findViewById(R.id.tempinfoEditText);
         EditText humEt = (EditText) findViewById(R.id.humidinfoEditText);
         EditText pressureEt = (EditText) findViewById(R.id.pressureinfoEditText);
+
+        if(cityEt.getText().toString().matches("") ||
+                coordEt.getText().toString().matches("") ||
+                tempEt.getText().toString().matches("") ||
+                humEt.getText().toString().matches("") ||
+                pressureEt.getText().toString().matches(""))
+            return false;
 
         String[] str = coordEt.getText().toString().split(",");
         str[0] = str[0].replace("N", "");
@@ -91,5 +101,7 @@ public class ModifyActivity extends AppCompatActivity implements ModifyScreen{
             DBHelper.getInstance(this).insertCity(DBHelper.getInstance(this).maxID() + 1, cityEt.getText().toString(), str[0], str[1], tempEt.getText().toString().replace(" °C", ""), humEt.getText().toString().replace(" %", ""), pressureEt.getText().toString().replace(" hPa", ""));
         else
             DBHelper.getInstance(this).updateCity(id, cityEt.getText().toString(), str[0], str[1], tempEt.getText().toString().replace(" °C", ""), humEt.getText().toString().replace(" %", ""), pressureEt.getText().toString().replace(" hPa", ""));
+
+        return true;
     }
 }

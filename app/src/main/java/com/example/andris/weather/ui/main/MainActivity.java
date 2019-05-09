@@ -3,6 +3,7 @@ package com.example.andris.weather.ui.main;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity implements MainScreen {
                 //tv.setText(mydb.getDataString("Szeged"));
             }
         });*/
+
+        //EditText et = (EditText) findViewById(R.id.searchEditText);
+        //et.setText(String.valueOf(DBHelper.getInstance(this).numberOfRows()));
 
 
     }
@@ -124,4 +128,16 @@ public class MainActivity extends AppCompatActivity implements MainScreen {
         }
         dbThread.start();
     }*/
+
+    public static boolean proba(int i){
+        if(i == 0)
+            return true;
+        return false;
+    }
+
+    public String proba1(int i){
+        if(i == 0)
+            return "True";
+        return "False";
+    }
 }

@@ -4,5 +4,5 @@ public interface ModifyScreen {
     //TO-DO: függvényeket még meg kell írni
     void showCityDatas();
 
-    void saveCityDatas();
+    boolean saveCityDatas();
 }
